@@ -5,15 +5,18 @@ import { Parties } from '../collections/parties';
 angular.module('socially', [
   angularMeteor
 ])
-.controller('PartiesListCtrl', function($scope, $reactive) {
+.component('partiesList', {
+  templateUrl: 'client/partiesList.html',
+  controllerAs: 'partiesList',
+  controller($scope, $reactive) {
     'ngInject';
+    
     $reactive(this).attach($scope);
+    
     this.helpers({
       parties() {
         return Parties.find({});
-      
       }
     });
-    // console.log($scope.parties);
-    // $scope.parties.forEach((party) => {console.log(party)});
-  });
+  }  
+});
