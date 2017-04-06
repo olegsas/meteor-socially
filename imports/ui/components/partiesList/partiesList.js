@@ -4,8 +4,6 @@ import { Parties } from '/collections/parties';
 
 import template from './partiesList.html';
 
-console.log(template);
-
 class PartiesList {
     constructor($scope, $reactive) {
         'ngInject';

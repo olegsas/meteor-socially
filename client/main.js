@@ -3,8 +3,3 @@ import angularMeteor from 'angular-meteor';
 import { Parties } from '../collections/parties';
 
 import { name as Socially } from '../imports/ui/components/socially/socially';
-
-// angular.module('socially', [
-//     angularMeteor,
-//     PartiesList
-// ]);
