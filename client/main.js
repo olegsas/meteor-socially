@@ -2,9 +2,9 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Parties } from '../collections/parties';
 
-import { name as PartiesList } from '../imports/ui/components/partiesList/partiesList';
+import { name as Socially } from '../imports/ui/components/socially/socially';
 
-angular.module('socially', [
-    angularMeteor,
-    PartiesList
-]);
+// angular.module('socially', [
+//     angularMeteor,
+//     PartiesList
+// ]);
