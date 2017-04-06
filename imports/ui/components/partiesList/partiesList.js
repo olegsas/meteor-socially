@@ -2,9 +2,9 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Parties } from '/collections/parties';
 
-import templateUrl from './partiesList.html';
+import template from './partiesList.html';
 
-const template = "<ul><li ng-repeat='party in partiesList.parties'>{{party.name}}<p>{{party.description}}</p></li></ul>"
+console.log(template);
 
 class PartiesList {
     constructor($scope, $reactive) {
@@ -26,8 +26,7 @@ const name = 'partiesList';
 export default angular.module(name, [
     angularMeteor
 ]).component(name, {
-    // template,
-    templateUrl,
+    template,
     controllerAs: name,
     controller: PartiesList
 });
