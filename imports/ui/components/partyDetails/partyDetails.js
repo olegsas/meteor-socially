@@ -19,8 +19,19 @@ class PartyDetails {
                     _id: $stateParams.partyId
                 });
             }
-        });
-    }
+        });    
+    } 
+            save() {
+                Parties.update({
+                    _id: this.party._id
+            }, {
+                $set: {
+                name: "10000", description: "2000000"
+                } 
+            });
+        // console.log($stateParams.partyId._id);
+            }
+    // }
 }
 
 const name = 'partyDetails';
