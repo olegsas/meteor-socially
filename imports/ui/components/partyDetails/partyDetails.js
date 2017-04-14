@@ -16,22 +16,29 @@ class PartyDetails {
         this.helpers({
             party() {
                 return Parties.findOne({
-                    _id: $stateParams.partyId
+                    _id: this.partyId
                 });
             }
         });    
     } 
-            save() {
-                Parties.update({
-                    _id: this.party._id
-            }, {
-                $set: {
-                name: "10000", description: "2000000"
-                } 
-            });
-        // console.log($stateParams.partyId._id);
+    save() {
+        Parties.update({
+          _id: this.party._id
+        }, {
+            $set: {
+                name: this.party.name,
+                description: this.party.description
             }
-    // }
+        }
+        , (error) => {
+              if (error) {
+                console.log('Oops, unable to update the party...');
+            } else {
+                console.log('Done!');
+            }
+        }
+        );
+    }
 }
 
 const name = 'partyDetails';
