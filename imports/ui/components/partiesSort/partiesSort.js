@@ -5,7 +5,7 @@ import template from './partiesSort.html';
 
 class PartiesSort {
     constructor($timeout) {
-        'nginject';
+        'ngInject';
 
         $timeout( () => this.changed() );
     }
