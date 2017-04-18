@@ -22,8 +22,12 @@ class PartyDetails {
                 });
             }
         });    
+    console.log('party = ');
+    console.log($scope.party);
+    console.log('this.partyId = ');
+    console.log(this.partyId);
     } 
-    save() {
+        save() {
         Parties.update({
           _id: this.party._id
         }, {
