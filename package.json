@@ -10,6 +10,7 @@
     "angular-ui-router": "^0.4.2",
     "angular-utils-pagination": "^0.11.1",
     "babel-runtime": "^6.23.0",
-    "meteor-node-stubs": "~0.2.4"
+    "meteor-node-stubs": "~0.2.4",
+    "underscore": "^1.8.3"
   }
 }
